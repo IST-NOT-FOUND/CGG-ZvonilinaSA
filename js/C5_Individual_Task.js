@@ -106,15 +106,16 @@ function initBuffers() {
     // установка цветов для каждой вершины
     var сolors = [
         1.0, 0.0, 1.0,
-        1.0, 0.0, 1.0,
+        1.0, 1.0, 1.0,
+		
+        0.5, 0.0, 0.5,
+        0.5, 0.0, 0.5,
+
+        1.0, 1.0, 1.0,
+        0.5, 0.0, 0.5,
 		
         1.0, 0.0, 1.0,
-        1.0, 0.0, 1.0,
-
-        1.0, 0.0, 1.0,
-        0.5, 0.0, 0.5,
-        1.0, 0.0, 1.0,
-        1.0, 0.0, 1.0
+        1.0, 1.0, 1.0
     ];
     colorBuffer = gl.createBuffer();
     gl.bindBuffer(gl.ARRAY_BUFFER, colorBuffer);
@@ -144,7 +145,7 @@ function setupWebGL()
     mat4.perspective(pMatrix, 1.04, gl.viewportWidth / gl.viewportHeight, 0.1, 100.0);
     mat4.identity(mvMatrix);
     mat4.translate(mvMatrix,mvMatrix,[0, 0, -2.0]);
-    mat4.rotate(mvMatrix,mvMatrix, 2.0, [1, 1, 0]);
+    mat4.rotate(mvMatrix,mvMatrix, 4.0, [1, 1, 0]);
 }
 
 window.onload=function(){
